@@ -95,3 +95,67 @@ nav ul a:hover::before {
 .nav-link.active::before {
   width: 100%;
 }
+
+/* * dropdown */ 
+
+.dropdown-vagas {
+    display: none;
+    position: absolute;
+    top: 230%;
+    width: min(90vw, 500px);
+    left: 0;
+    padding: -8px;
+    border: solid 0.4px var(--cor-cinza-medio);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .dropdown-img{
+        position: relative;
+        width: 50%;
+        max-width: 240px;
+        left: 50%;
+        height: auto;
+        display: block;
+    }
+
+    .dropdown-tittle{
+        position: absolute;
+        top: 12%;
+        margin-bottom: 10px;
+        font-family: Cambay, sans-serif;
+        font-weight: bold;
+        margin: 16px;
+        color: var(--cor-cinza);
+    }
+
+    .dropdown-description{
+        position: absolute;
+        top: 26%;
+        font-family: Mulish;
+        font-weight: 300;
+        margin: 16px;
+        color: var(--cor-cinza);
+    }
+
+    .dropdown-button{
+        position: absolute;
+        background: #fafafa;
+        top: 64%;
+        border-radius: 6px;
+        border: solid 0.4px color-mix(in srgb, var(--cor-cinza) 25%, transparent);
+        padding: 10px 20px;
+        margin: 16px;
+        font-family: Mulish;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.link:hover .dropdown-vagas,
+.link:has(.dropdown-vagas:hover) .dropdown-vagas {
+    display: block;
+}
+
+.link:hover .nav-link::before,
+.link:has(.dropdown-vagas:hover) .nav-link::before {
+    width: 100%;
+}
