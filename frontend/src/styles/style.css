@@ -159,3 +159,33 @@ nav ul a:hover::before {
 .link:has(.dropdown-vagas:hover) .nav-link::before {
     width: 100%;
 }
+
+.nav-logo {
+    margin: 10px;
+
+    img {
+        width: 60px;
+    }
+}
+
+.entrar {
+    margin: 10px;
+}
+
+.entrar button {
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    font-family: Mulish;
+    font-weight: bolder;
+    font-size: 16px;
+    background-color: #000000;
+    color: #fafafa;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.entrar button:hover {
+    background-color: var(--cor-azul-claro);
+}
