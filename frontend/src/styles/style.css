@@ -18,7 +18,8 @@
     --cor-cinza: #333333;
 }
 
-li, p {
+li,
+p {
     font-family: Mulish, sans-serif;
 }
 
@@ -96,7 +97,8 @@ nav ul a:hover::before {
   width: 100%;
 }
 
-/* * dropdown */ 
+
+/* dropdown */
 
 .dropdown-vagas {
     display: none;
@@ -149,6 +151,7 @@ nav ul a:hover::before {
         cursor: pointer;
     }
 }
+
 
 .link:hover .dropdown-vagas,
 .link:has(.dropdown-vagas:hover) .dropdown-vagas {
@@ -229,22 +232,28 @@ main {
         font-size: 20px;
         font-weight:300;
     }
+
+    .btn-comecar {
+        border-radius: 50px;
+        border: 0.8px solid var(--cor-azul-claro);
+        color: var(--cor-azul-claro);
+        background-color: #fafafa;
+        padding: 12px 30px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .btn-comecar:hover {
+        color:#fafafa ;
+        background-color: var(--cor-azul-claro);
+        padding: 12px 30px;
+        font-weight: bold;
+        font-size: 16px;
+    }
 }
 
-.btn-comecar {
-    border-radius: 50px;
-    border: 0.8px solid var(--cor-azul-claro);
-    color: var(--cor-azul-claro);
-    background-color: #fafafa;
-    padding: 12px 30px;
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
-}
+/* login-modal */
 
-.btn-comecar:hover {
-    color:#fafafa ;
-    background-color: var(--cor-azul-claro);
-}
+
 
