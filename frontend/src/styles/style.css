@@ -307,3 +307,11 @@ h2{
     font-weight: 500;
   }
 }
+
+.close-modal{
+    position: absolute;
+    right: 1rem;
+    top: 0.4rem;
+    font-size: 2em;
+    cursor: pointer;
+}
