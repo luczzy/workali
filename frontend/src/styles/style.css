@@ -280,5 +280,30 @@ main {
   position: relative;
   animation: fadeIn 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
 
+h2{
+    font-family: Cambay, sans-serif;
+  }
+
+  p{
+    font-family: Mulish, sans-serif;
+    font-weight: 300;
+  }
+  a{
+    color: var(--cor-azul-claro);
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: var(--cor-azul-claro);
+    text-decoration: underline;
+  }
+
+  h3{
+    text-align: left;
+    margin: auto;
+    font-size: 1rem;
+    font-family: Mulish, sans-serif;
+    font-weight: 500;
+  }
+}
