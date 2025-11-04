@@ -315,3 +315,38 @@ h2{
     font-size: 2em;
     cursor: pointer;
 }
+
+btn-google, .btn-apple, .btn-login {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-google {
+  color: #fafafa;
+  font-family: Mulish, sans-serif;
+  font-weight: 600;
+  background-color: var(--cor-azul-claro);
+  border: 1px solid #ccc;
+   
+}
+
+.btn-google:hover{
+    background-color: #fafafa;
+    color: var(--cor-azul-claro);
+  }
+
+.btn-apple {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-login {
+  background-color: #007bff;
+  color: #fff;
+}
