@@ -152,7 +152,6 @@ nav ul a:hover::before {
     }
 }
 
-
 .link:hover .dropdown-vagas,
 .link:has(.dropdown-vagas:hover) .dropdown-vagas {
     display: block;
@@ -256,24 +255,24 @@ main {
 /* login-modal */
 
 .login-modal {
-  display: none;                
+  display: none;                 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); 
   z-index: 1000;
 
   display: flex;
-  align-items: center;  
+  align-items: center;   
   justify-content: center;
 }
 
 .modal-inner{
   background: #fafafa;
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 4rem;
+  border-radius: 8px;
   width: 90%;
   max-width: 420px;
   text-align: center;
@@ -281,7 +280,7 @@ main {
   animation: fadeIn 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 
-h2{
+  h2{
     font-family: Cambay, sans-serif;
   }
 
@@ -310,45 +309,50 @@ h2{
 
 .close-modal{
     position: absolute;
-    right: 1rem;
-    top: 0.4rem;
-    font-size: 2em;
+    right: 2rem;
+    top: 0.6rem;
+    font-size: 3rem;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
-btn-google, .btn-apple, .btn-login {
-  display: block;
-  width: 100%;
-  padding: 12px;
+.close-modal:hover{
+  color: var(--cor-vermelho);
+}
+
+.btn-google, .btn-apple, .btn-email {
+  box-sizing: border-box;
+  background-color: #fafafa;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
   margin: 8px 0;
-  border: none;
+  width: 100%;
+  padding: 12px 16px;
   border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.btn-google {
-  color: #fafafa;
+  border: 0.4px solid;
   font-family: Mulish, sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  background-color: var(--cor-azul-claro);
-  border: 1px solid #ccc;
-   
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-.btn-google:hover{
-    background-color: #fafafa;
-    color: var(--cor-azul-claro);
-  }
-
-.btn-apple {
-  background-color: #000;
-  color: #fff;
+.btn-google svg,
+.btn-apple svg {
+    position: absolute;
+    left: 16px;
 }
 
-.btn-login {
-  background-color: #007bff;
-  color: #fff;
+.btn-google:hover,
+.btn-apple:hover {
+  border: 1px solid var(--cor-azul-claro);
+}
+
+.btn-email:hover{
+    color: #fafafa;
+    background-color: var(--cor-azul-claro);
 }
 
 .form-login input {
@@ -364,7 +368,7 @@ btn-google, .btn-apple, .btn-login {
 }
 
 .form-login input:focus {
-  border-color: var(--cor-azul-claro);
+  border-color: var(--cor-azul-claro); 
 }
 
 .ou {
@@ -382,12 +386,12 @@ btn-google, .btn-apple, .btn-login {
 }
 
 .message {
-  margin-bottom: 0;
-  font-size: 0.9rem;
-  color: #555;
+    font-family: Mulish, sans-serif;
+    font-weight: lighter;
 }
 
 @keyframes fadeIn {
   from {opacity: 0; transform: scale(0.9);}
   to {opacity: 1; transform: scale(1);}
 }
+
