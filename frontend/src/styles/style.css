@@ -18,8 +18,7 @@
     --cor-cinza: #333333;
 }
 
-li,
-p {
+li, p {
     font-family: Mulish, sans-serif;
 }
 
@@ -38,4 +37,61 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
+}
+
+.nav-container {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.4px solid var(--cor-cinza-medio);
+    flex-wrap: wrap;
+}
+
+.menu .list .link {
+    position: relative;
+}
+
+.list {
+    list-style: none;
+    gap: 30px;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+nav ul a::before {
+    content: "";
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: var(--cor-amarelo);
+    border-radius: 1px;
+    transition: width 0.2s ease;
+}
+
+nav ul a:hover::before {
+    width: 100%;
+}
+
+.link:hover .nav-link::after,
+.link:has(.dropdown-vagas:hover) .nav-link::after {
+  width: 100%;
+}
+
+.nav-link.active::before {
+  width: 100%;
 }
