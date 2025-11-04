@@ -3,5 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropdown = document.querySelector(".dropdown-vagas");
     const navLink = link.querySelector(".nav-link");
 
+    let hoverTimeout;a
+
+    function showDropdown() {
+      clearTimeout(hoverTimeout);
+      dropdown.style.display = "block";
+      navLink.classList.add("active");
+    }
+  
+    function hideDropdown() {
+      hoverTimeout = setTimeout(() => {
+        dropdown.style.display = "none";
+        navLink.classList.remove("active");
+      }, 150);
+    }
+    
     console.log("DOM carregado!");
 });
