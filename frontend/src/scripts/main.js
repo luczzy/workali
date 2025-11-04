@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
         navLink.classList.remove("active");
       }, 150);
     }
-    
+
+    link.addEventListener("mouseenter", showDropdown);
+    link.addEventListener("mouseleave", hideDropdown);
+    dropdown.addEventListener("mouseenter", showDropdown);
+    dropdown.addEventListener("mouseleave", hideDropdown);  
+
     console.log("DOM carregado!");
 });
