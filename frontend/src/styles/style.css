@@ -350,3 +350,19 @@ btn-google, .btn-apple, .btn-login {
   background-color: #007bff;
   color: #fff;
 }
+
+.form-login input {
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 0.4px solid #ccc;
+  outline: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.form-login input:focus {
+  border-color: var(--cor-azul-claro);
+}
