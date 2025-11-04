@@ -230,3 +230,21 @@ main {
         font-weight:300;
     }
 }
+
+.btn-comecar {
+    border-radius: 50px;
+    border: 0.8px solid var(--cor-azul-claro);
+    color: var(--cor-azul-claro);
+    background-color: #fafafa;
+    padding: 12px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-comecar:hover {
+    color:#fafafa ;
+    background-color: var(--cor-azul-claro);
+}
+
