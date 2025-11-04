@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    /* paleta principal */
+    --cor-azul-claro: #0092d4;
+    --cor-azul-marista: #003a60;
+    /* paleta auxiliar */
+    --cor-amarelo: #fdc300;
+    --cor-vermelho: #e7343f;
+    --cor-rosa: #ea5297;
+    --cor-turquesa: #4fbcc1;
+    --cor-roxo: #745ba3;
+    --cor-verde: #52ae32;
+    /* paleta de apoio */
+    --cor-cinza-claro: #e7e8e9;
+    --cor-cinza-medio: #c0c0c0;
+    --cor-cinza-escuro: #575756;
+    --cor-cinza: #333333;
+}
