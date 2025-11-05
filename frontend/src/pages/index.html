@@ -1,304 +1,289 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="/frontend/src/styles/style.css"
-    />
-    <script src="/frontend/src/scripts/main.js"></script>
-  </head>
 
-  <body>
-    <nav class="nav-container">
-      <div class="nav-logo">
-        <a href="#"><img src="/frontend/src/public/img/Union.svg" alt="" /></a>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/frontend/src/styles/style.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/frontend/src/styles/mediaQuery.css" />
+  <script src="/frontend/src/scripts/main.js"></script>
+</head>
 
-      <div class="menu">
-        <ul class="list">
-          <li class="link">
-            <a href="#" class="nav-link">Vagas</a>
-            <div class="dropdown-vagas">
-              <img
-                src="/frontend/src/public/img/ilustre-vagas.svg"
-                alt="ilustração"
-                class="dropdown-img"
-              />
-              <h1 class="dropdown-tittle">Tittle</h1>
-              <h2 class="dropdown-description">description</h2>
-              <button class="dropdown-button">Começar a usar o Workali</button>
-            </div>
-          </li>
+<body>
+  <nav class="nav-container">
+    <div class="nav-logo">
+      <a href="#"><img src="/frontend/src/public/img/Union.svg" alt="" /></a>
+    </div>
 
-          <li class="link"><a href="#">Recursos</a></li>
-          <li class="link"><a href="#">Sobre</a></li>
-          <li class="link"><a href="#">Para Empresas</a></li>
-        </ul>
-      </div>
+    <div class="menu">
+      <ul class="list">
+        <li class="link">
+          <a href="#" class="nav-link">Vagas</a>
+          <div class="dropdown-vagas">
+            <img src="/frontend/src/public/img/ilustre-vagas.svg" alt="ilustração" class="dropdown-img" />
+            <h1 class="dropdown-tittle">Tittle</h1>
+            <h2 class="dropdown-description">description</h2>
+            <button class="dropdown-button">Começar a usar o Workali</button>
+          </div>
+        </li>
 
-      <div class="entrar">
-        <button class="btn-entrar">Entrar</button>
-      </div>
+        <li class="link"><a href="#">Recursos</a></li>
+        <li class="link"><a href="#">Sobre</a></li>
+        <li class="link"><a href="#">Para Empresas</a></li>
+      </ul>
+    </div>
+    <div class="menu-mobile">
+      <ul class="list">
+        <li class="link">
+          <a href="#" class="nav-link">Vagas</a>
+          <div class="dropdown-vagas">
+            <img src="/frontend/src/public/img/ilustre-vagas.svg" alt="ilustração" class="dropdown-img" />
+            <h1 class="dropdown-tittle">Tittle</h1>
+            <h2 class="dropdown-description">description</h2>
+            <button class="dropdown-button">Começar a usar o Workali</button>
+          </div>
+        </li>
+        <li class="link"><a href="#" class="nav-link">Recursos</a></li>
+        <li class="link"><a href="#" class="nav-link">Sobre</a></li>
+        <li class="link"><a href="#" class="nav-link">Para Empresas</a></li>
+      </ul>
+    </div>
+    </div>
 
-      <div class="login-modal" id="login-modal">
-        <div class="modal-inner">
-          <span class="close-modal">&times;</span>
-          <h2>Entre na sua conta ou crie uma conta</h2>
-          <p>
-            Ao continuar, você indica que concorda com os
-            <a href="#">Termos de Uso</a> e a
-            <a href="#">Política de Privacidade</a> do Workali.
-          </p>
+    <div class="entrar">
+      <button class="btn-entrar">Entrar</button>
+    </div>
 
-          <button class="btn-google">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              width="20"
-              height="20"
-            >
-              <path
-                d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+    <div class="login-modal" id="login-modal">
+      <div class="modal-inner">
+        <span class="close-modal">&times;</span>
+        <h2>Entre na sua conta ou crie uma conta</h2>
+        <p>
+          Ao continuar, você indica que concorda com os
+          <a href="#">Termos de Uso</a> e a
+          <a href="#">Política de Privacidade</a> do Workali.
+        </p>
+
+        <button class="btn-google">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20" height="20">
+            <path d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
       c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
-      C103.821,274.792,107.225,292.797,113.47,309.408z"
-                fill="#FBBB00"
-              ></path>
-              <path
-                d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+      C103.821,274.792,107.225,292.797,113.47,309.408z" fill="#FBBB00"></path>
+            <path d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
       c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
       c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"
-                fill="#518EF8"
-              ></path>
-              <path
-                d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+              fill="#518EF8"></path>
+            <path d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
       c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
-      c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"
-                fill="#28B446"
-              ></path>
-              <path
-                d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+      c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z" fill="#28B446"></path>
+            <path d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
       c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
-      C318.115,0,375.068,22.126,419.404,58.936z"
-                fill="#F14336"
-              ></path>
-            </svg>
-            <span>Entrar com Google</span>
-          </button>
+      C318.115,0,375.068,22.126,419.404,58.936z" fill="#F14336"></path>
+          </svg>
+          <span>Entrar com Google</span>
+        </button>
 
-          <button class="btn-apple">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 22.773 22.773"
-              width="20"
-              height="20"
-              fill="currentColor"
-            >
-              <path
-                d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573
-    c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z"
-              ></path>
-              <path
-                d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334
+        <button class="btn-apple">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.773 22.773" width="20" height="20"
+            fill="currentColor">
+            <path d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573
+    c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z"></path>
+            <path d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334
     c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0
     c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019
     c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464
     c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648
-    c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z"
-              ></path>
-            </svg>
-            <span>Entrar com Apple</span>
+    c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z">
+            </path>
+          </svg>
+          <span>Entrar com Apple</span>
+        </button>
+
+        <div class="ou">
+          <div class="line"></div>
+          <p class="message">ou</p>
+          <div class="line"></div>
+        </div>
+
+        <h3>Insira o e-mail</h3>
+        <form class="form-login">
+          <input type="email" class="input-email" required />
+          <button type="submit" class="btn-email">
+            Continuar com e-mail
           </button>
-
-          <div class="ou">
-            <div class="line"></div>
-            <p class="message">ou</p>
-            <div class="line"></div>
-          </div>
-
-          <h3>Insira o e-mail</h3>
-          <form class="form-login">
-            <input type="email" class="input-email" required />
-            <button type="submit" class="btn-email">
-              Continuar com e-mail
-            </button>
-          </form>
-        </div>
+        </form>
       </div>
-    </nav>
-    <main>
-      <section class="content-main">
-        <div class="top"></div>
-        <div class="titulo">
-          <h1>Workali</h1>
-          <h2>estudo e trabalho</h2>
-        </div>
-        <div class="paragrafo">
-          <p>
-            Nossa plataforma conecta estudantes a oportunidades próximas,
-            tornando o trabalho mais acessível e humano.
-          </p>
-          <a href="#"><button class="btn-comecar">Começar</button></a>
-        </div>
-      </section>
+    </div>
+  </nav>
+  <main>
+    <section class="content-main">
+      <div class="top"></div>
+      <div class="titulo">
+        <h1>Workali</h1>
+        <h2>estudo e trabalho</h2>
+      </div>
+      <div class="paragrafo">
+        <p>
+          Nossa plataforma conecta estudantes a oportunidades próximas,
+          tornando o trabalho mais acessível e humano.
+        </p>
+        <a href="#"><button class="btn-comecar">Começar</button></a>
+      </div>
+    </section>
 
-      <section class="coluna-inf">
-        <div class="anuncio">
-          <h2>Equilibre estudo e trabalho com Workali</h2>
-          <p>
-            Trazemos vagas e recursos pensados para estudantes, dando o suporte
-            que você precisa para evoluir.
-          </p>
-        </div>
-      </section>
+    <section class="coluna-inf">
+      <div class="anuncio">
+        <h2>Equilibre estudo e trabalho com Workali</h2>
+        <p>
+          Trazemos vagas e recursos pensados para estudantes, dando o suporte
+          que você precisa para evoluir.
+        </p>
+      </div>
+    </section>
 
-      <section class="card-coloridos">
-        <div class="item-card">
-          <div class="left">
-            <div class="name-card">
-              <b>Seu futuro começa aqui</b>
-            </div>
-          </div>
-          <div class="right">
-            <div class="titulo-card"></div>
-            <div class="paragrafo">
-              <p>
-                Conectamos estudantes a oportunidades flexíveis e próximas, para
-                que você concilie estudo e trabalho.<a href="#"
-                  >Comece agora.</a
-                >
-              </p>
-            </div>
+    <section class="card-coloridos">
+      <div class="item-card">
+        <div class="left">
+          <div class="name-card">
+            <b>Seu futuro começa aqui</b>
           </div>
         </div>
-      </section>
-
-      <section class="coluna-inf">
-        <div class="anuncio">
-          <h2>Gostaria de se tornar um colaborador?</h2>
-          <p>Conecte-se a candidatos prontos para evoluir com você.</p>
-        </div>
-      </section>
-
-      <section class="conteudo-etapas">
-        <div class="card-etapa">
-          <div class="num">
-            <b>1</b>
-          </div>
-          <div class="titulo"></div>
+        <div class="right">
+          <div class="titulo-card"></div>
           <div class="paragrafo">
             <p>
-              Você só precisa de um endereço de e-mail para criar uma conta e
-              começar a criar um anúncio de vaga de emprego.
+              Conectamos estudantes a oportunidades flexíveis e próximas, para
+              que você concilie estudo e trabalho.<a href="#">Comece agora.</a>
             </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="banner-eco">
-        <div class="titulo-banner">
-          <h1>Economize tempo e esforço na sua jornada de contratação</h1>
+    <section class="coluna-inf">
+      <div class="anuncio">
+        <h2>Gostaria de se tornar um colaborador?</h2>
+        <p>Conecte-se a candidatos prontos para evoluir com você.</p>
+      </div>
+    </section>
+
+    <section class="conteudo-etapas">
+      <div class="card-etapa">
+        <div class="num">
+          <b>1</b>
         </div>
+        <div class="titulo"></div>
         <div class="paragrafo">
           <p>
-            Encontrar estudantes certos para sua vaga pode ser simples. No
-            Workali, você se conecta com talentos em formação de maneira prática
-            e humana.
+            Você só precisa de um endereço de e-mail para criar uma conta e
+            começar a criar um anúncio de vaga de emprego.
           </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="grid-info">
-        <div class="item-info">
-          <div class="left"></div>
-          <div class="right">
-            <div class="titulo">
-              <b>Conecte-se a novos estudantes</b>
-            </div>
-            <div class="descricao">
-              <p>
-                Destaque sua vaga e conecte-se com estudantes e profissionais
-                certos.
-              </p>
-            </div>
+    <section class="banner-eco">
+      <div class="titulo-banner">
+        <h1>Economize tempo e esforço na sua jornada de contratação</h1>
+      </div>
+      <div class="paragrafo">
+        <p>
+          Encontrar estudantes certos para sua vaga pode ser simples. No
+          Workali, você se conecta com talentos em formação de maneira prática
+          e humana.
+        </p>
+      </div>
+    </section>
+
+    <section class="grid-info">
+      <div class="item-info">
+        <div class="left"></div>
+        <div class="right">
+          <div class="titulo">
+            <b>Conecte-se a novos estudantes</b>
+          </div>
+          <div class="descricao">
+            <p>
+              Destaque sua vaga e conecte-se com estudantes e profissionais
+              certos.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="vaga-content">
-        <div class="left-btn"></div>
-        <div class="right-desc">
-          <p>
-            Gerencie suas vagas com liberdade: edite, atualize, pause ou encerre
-            quando quiser. <a href="">Descubra como anunciar no Workali.</a>
-          </p>
-        </div>
-      </section>
+    <section class="vaga-content">
+      <div class="left-btn"></div>
+      <div class="right-desc">
+        <p>
+          Gerencie suas vagas com liberdade: edite, atualize, pause ou encerre
+          quando quiser. <a href="">Descubra como anunciar no Workali.</a>
+        </p>
+      </div>
+    </section>
 
-      <footer>
-        <div class="coluna">
-          <div class="logo">
-            <img src="/frontend/src/public/img/logo.svg" alt="Logo" />
-          </div>
+    <footer>
+      <div class="coluna">
+        <div class="logo">
+          <img src="/frontend/src/public/img/logo.svg" alt="Logo" />
         </div>
+      </div>
 
-        <div class="coluna">
-          <div class="titulo">Workali</div>
-          <div class="link">
-            <a href="">Sobre o Workali</a>
-          </div>
-          <div class="link">
-            <a href="">Como funciona</a>
-          </div>
-          <div class="link">
-            <a href="">Fale Conosco</a>
-          </div>
+      <div class="coluna">
+        <div class="titulo">Workali</div>
+        <div class="link">
+          <a href="">Sobre o Workali</a>
         </div>
+        <div class="link">
+          <a href="">Como funciona</a>
+        </div>
+        <div class="link">
+          <a href="">Fale Conosco</a>
+        </div>
+      </div>
 
-        <div class="coluna">
-          <div class="titulo">Empresas</div>
-          <div class="link">
-            <a href="">Crie uma conta gratuita</a>
-          </div>
-          <div class="link">
-            <a href="">Área da empresa</a>
-          </div>
-          <div class="link">
-            <a href="">Anunciar sua vaga</a>
-          </div>
+      <div class="coluna">
+        <div class="titulo">Empresas</div>
+        <div class="link">
+          <a href="">Crie uma conta gratuita</a>
         </div>
+        <div class="link">
+          <a href="">Área da empresa</a>
+        </div>
+        <div class="link">
+          <a href="">Anunciar sua vaga</a>
+        </div>
+      </div>
 
-        <div class="coluna">
-          <div class="titulo">Informações</div>
-          <div class="link">
-            <a href="">Ajuda</a>
-          </div>
-          <div class="link">
-            <a href="">Termos de uso</a>
-          </div>
-          <div class="link">
-            <a href="">Privacidade e opções de anúncio</a>
-          </div>
+      <div class="coluna">
+        <div class="titulo">Informações</div>
+        <div class="link">
+          <a href="">Ajuda</a>
         </div>
+        <div class="link">
+          <a href="">Termos de uso</a>
+        </div>
+        <div class="link">
+          <a href="">Privacidade e opções de anúncio</a>
+        </div>
+      </div>
 
-        <div class="coluna">
-          <div class="titulo">Trabalhe conosco</div>
-          <div class="link">
-            <a href="">Anuciantes</a>
-          </div>
-          <div class="link">
-            <a href="">Carreiras</a>
-          </div>
-          <div class="link">
-            <a href="">Suporte</a>
-          </div>
+      <div class="coluna">
+        <div class="titulo">Trabalhe conosco</div>
+        <div class="link">
+          <a href="">Anuciantes</a>
         </div>
-      </footer>
-    </main>
-  </body>
+        <div class="link">
+          <a href="">Carreiras</a>
+        </div>
+        <div class="link">
+          <a href="">Suporte</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+
 </html>
