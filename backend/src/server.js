@@ -1,13 +1,18 @@
 import express from "express";
 import dotenv from "dotenv";
+import { connectDB } from "./Config/db.js";
 
 dotenv.config();
+connectDB();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+
+// conectar ao MongoDB
+connectDB();
 
 app.get("/", (req, res) => {
-  res.send("Servidor rodando! 🚀");
+  res.send("Servidor e banco estão funcionando 🔥");
 });
 
-app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`🚀 Servidor rodando na porta ${PORT}`));
