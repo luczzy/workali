@@ -1,9 +1,8 @@
-import express from "express";
 import dotenv from "dotenv";
+dotenv.config(); 
+import express from "express";
 import { connectDB } from "./Config/db.js";
 import authRoutes from "./Routes/authRoutes.js"; 
-
-dotenv.config();
 
 // conecta ao MongoDB
 connectDB();
