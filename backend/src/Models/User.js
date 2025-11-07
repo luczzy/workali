@@ -10,10 +10,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true, // evita e-mails duplicados
   },
-  senha: {
-    type: String,
-    required: true,
-  },
+
   criadoEm: {
     type: Date,
     default: Date.now,
