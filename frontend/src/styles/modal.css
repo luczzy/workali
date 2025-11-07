@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambay:ital,wght@0,400;0,700;1,400;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.login-modal {
+  display: none;                 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1000;
+
+  align-items: center;   
+  justify-content: center;
+}
+
+.modal-inner{
+  background: #fafafa;
+  padding: 4rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+  h2{
+    font-family: Cambay, sans-serif;
+  }
+
+  p{
+    font-family: Mulish, sans-serif;
+    font-weight: 300;
+  }
+  a{
+    color: var(--cor-azul-claro);
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: var(--cor-azul-claro);
+    text-decoration: underline;
+  }
+
+  h3{
+    text-align: left;
+    margin: auto;
+    font-size: 1rem;
+    font-family: Mulish, sans-serif;
+    font-weight: 500;
+  }
+}
+
+.close-modal{
+    position: absolute;
+    right: 2rem;
+    top: 0.6rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.close-modal:hover{
+  color: var(--cor-vermelho);
+}
+
+.btn-google, .btn-apple, .btn-email {
+  box-sizing: border-box;
+  background-color: #fafafa;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin: 8px 0;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 0.4px solid;
+  font-family: Mulish, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-google svg,
+.btn-apple svg {
+    position: absolute;
+    left: 16px;
+}
+
+.btn-google:hover,
+.btn-apple:hover {
+  border: 1px solid var(--cor-azul-claro);
+}
+
+.btn-email:hover{
+    color: #fafafa;
+    background-color: var(--cor-azul-claro);
+}
+
+.input-email {
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 0.4px solid #ccc;
+  outline: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.input-email:focus {
+  border-color: var(--cor-azul-claro); 
+}
+
+.ou {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+  margin: 0 10px;
+}
+
+.message {
+    font-family: Mulish, sans-serif;
+    font-weight: lighter;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.menu-mobile {
+    display: none;
+}
+
+/* loading */
+
+.loading {
+ display: none;
+ width: 3.25em;
+ transform-origin: center;
+ animation: rotate4 2s linear infinite;
+}
+
+circle {
+ fill: none;
+ stroke: var(--cor-azul-claro);
+ stroke-width: 2;
+ stroke-dasharray: 1, 200;
+ stroke-dashoffset: 0;
+ stroke-linecap: round;
+ animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes dash4 {
+ 0% {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+ }
+
+ 50% {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+ }
+
+ 100% {
+  stroke-dashoffset: -125px;
+ }
+}

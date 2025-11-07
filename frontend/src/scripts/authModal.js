@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("login-form");
-  const inputEmail = document.getElementById("email");
+  const inputEmail = document.querySelector(".input-email");
   const modal = document.getElementById("login-modal");
   const closeModal = document.querySelector(".close-modal");
   const btnEntrar = document.querySelector(".btn-entrar");
@@ -20,31 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const email = inputEmail.value.trim();
+
     if (!email) return alert("Digite um e-mail válido!");
 
     try {
-      // tenta login primeiro
+      // 1tenta login
       let resposta = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
 
-      // se usuário não existir, registra e faz login
+      // se não existir, cadastra e depois faz login
       if (!resposta.ok) {
-        // registra usuário
-        const registro = await fetch(`${API_URL}/register`, {
+        await fetch(`${API_URL}/register`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ nome: "Usuário", email }),
+          body: JSON.stringify({ nome: email.split("@")[0], email }),
         });
 
-        const registroDados = await registro.json();
-        if (!registro.ok && registroDados.erro) {
-          return alert("❌ Erro ao registrar: " + registroDados.erro);
-        }
-
-        // tenta login novamente
         resposta = await fetch(`${API_URL}/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -59,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("🎉 Login realizado com sucesso!");
         modal.style.display = "none";
       } else {
-        alert("❌ Erro: " + (dados.erro || "Tente novamente."));
+        alert("Erro: " + (dados.mensagem || "Tente novamente."));
       }
     } catch (erro) {
       console.error(erro);
