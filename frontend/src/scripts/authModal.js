@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".form-login");
+  const form = document.getElementById("login-form");
   const inputEmail = document.querySelector(".input-email");
   const modal = document.getElementById("login-modal");
   const closeModal = document.querySelector(".close-modal");
   const btnEntrar = document.querySelector(".btn-entrar");
+
+  const API_URL = "http://localhost:5000/api/auth";
 
   // === Mostrar e fechar modal ===
   btnEntrar.addEventListener("click", () => {
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.style.display = "none";
   });
 
-  // === Envio do e-mail para login ou registro ===
+  // === Envio do e-mail ===
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const email = inputEmail.value.trim();
@@ -22,25 +24,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!email) return alert("Digite um e-mail válido!");
 
     try {
-      // 1. Tenta login
-      let resposta = await fetch("http://localhost:3000/api/auth/login", {
+      // 1tenta login
+      let resposta = await fetch(`${API_URL}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, senha: "123456" }), // senha padrão temporária
+        body: JSON.stringify({ email }),
       });
 
-      // 2. Se falhar, tenta cadastro
+      // se não existir, cadastra e depois faz login
       if (!resposta.ok) {
-        await fetch("http://localhost:3000/api/auth/register", {
+        await fetch(`${API_URL}/register`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, senha: "123456" }),
+          body: JSON.stringify({ nome: email.split("@")[0], email }),
         });
 
-        resposta = await fetch("http://localhost:3000/api/auth/login", {
+        resposta = await fetch(`${API_URL}/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, senha: "123456" }),
+          body: JSON.stringify({ email }),
         });
       }
 
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (dados.token) {
         localStorage.setItem("token", dados.token);
-        alert("Login realizado com sucesso!");
+        alert("🎉 Login realizado com sucesso!");
         modal.style.display = "none";
       } else {
         alert("Erro: " + (dados.mensagem || "Tente novamente."));
