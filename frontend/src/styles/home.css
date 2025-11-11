@@ -27,12 +27,9 @@ h1 {
   font-family: Cambay;
   margin: 0;
   padding: 0;
+  width: 70%;
 }
 
-h2 {
-  padding: 0;
-  margin: 0;
-}
 
 body {
   width: 100%;
@@ -213,7 +210,7 @@ main {
 
 .content-main {
   width: 100%;
-  height: 100vh;
+  padding: 1rem; 
 }
 
 .content-main .top {
@@ -221,9 +218,10 @@ main {
 }
 
 .content-main h1 {
-  font-size: 80px;
+  margin-top: 2rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: var(--cor-azul-marista);
+  color: var(--cor-azul-claro);
 }
 
 .content-main h2 {
@@ -232,19 +230,23 @@ main {
   font-size: 50px;
   font-family: Mulish;
   font-weight: lighter;
-  color: var(--cor-azul-claro);
+  color: var(--cor-azul-claro); 
 }
 
 .paragrafo {
-  top: -50px;
-  position: relative;
   width: 60%;
+}
 
-  p {
-    font-family: Mulish;
-    font-size: 20px;
-    font-weight: 300;
-  }
+.paragrafo p {
+  color: var(--cor-cinza);
+  font-family: Mulish;
+  font-size: 1.1rem;
+  font-weight: light;
+  margin-top: 0.4rem;  
+  word-wrap: break-word;    /* para palavras muito longas */
+  overflow-wrap: break-word; 
+  white-space: normal; 
+}
 
   .btn-comecar {
     border-radius: 50px;
@@ -254,6 +256,7 @@ main {
     padding: 12px 30px;
     font-weight: bold;
     font-size: 16px;
+    margin-top: 2rem; 
     transition: 0.3s ease-in-out;
     cursor: pointer;
   }
@@ -264,7 +267,6 @@ main {
     font-weight: bold;
     font-size: 16px;
   }
-}
 
 /* login-modal */
 
