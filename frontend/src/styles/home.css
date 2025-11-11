@@ -422,11 +422,65 @@ main {
   font-weight: 300;
 }
 
-.card-coloridos {
+.cards-coloridos {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  flex-wrap: wrap; 
+  gap: 24px;       
   margin: 8rem 0;
+}
+
+.card-colorido {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  flex: 0 1 calc(50% - 12px);
+  box-sizing: border-box;
+  gap: 32px;
+  margin: 2rem 0;
+  min-width: 50px;
+}
+
+.card-colorido.turquesa .item-card::after {
+  background-color: var(--cor-turquesa);
+}
+.card-colorido.turquesa b {
+  color: var(--cor-turquesa);
+}
+
+.card-colorido.verde .item-card::after {
+  background-color: var(--cor-verde);
+}
+.card-colorido.verde b {
+  color: var(--cor-verde);
+}
+
+.card-colorido.amarelo .item-card::after {
+  background-color: var(--cor-amarelo);
+}
+.card-colorido.amarelo b {
+  color: var(--cor-amarelo);
+}
+
+.card-colorido.rosa .item-card::after {
+  background-color: var(--cor-rosa);
+}
+.card-colorido.rosa b {
+  color: var(--cor-rosa);
+}
+
+.card-colorido.roxo .item-card::after {
+  background-color: var(--cor-roxo);
+}
+.card-colorido.roxo b {
+  color: var(--cor-roxo);
+}
+
+.card-colorido.vermelho .item-card::after {
+  background-color: var(--cor-vermelho);
+}
+.card-colorido.vermelho b {
+  color: var(--cor-vermelho);
 }
 
 .item-card {
@@ -454,7 +508,6 @@ main {
   top: 48px;
   bottom: 48px;
   width: 4px;
-  background-color: var(--cor-turquesa);
 }
 
 .item-card::after {
@@ -465,7 +518,6 @@ main {
   top: 48px;
   bottom: 48px;
   width: 4px;
-  background-color: var(--cor-turquesa);
   transition: transform 300ms ease;
   z-index: 4;
 }
@@ -476,7 +528,6 @@ main {
 
 .item-card b {
   font-size: 1.4rem;
-  color: var(--cor-turquesa);
   font-family: Mulish, sans-serif;
   white-space: normal;
   font-weight: bold;
@@ -486,15 +537,15 @@ main {
 }
 
 .texto-lateral {
-  max-width: 350px;
-  margin-left: 1rem;
+  max-width: 320px;
+  margin-left: 0;
 }
 
 .texto-lateral h2 {
   font-size: 1.4rem;
   font-family: Cambay, sans-serif;
   color: var(--cor-cinza);
-  margin-bottom: 0.4rem;
+  margin-top: 1rem;
 }
 
 .texto-lateral p {
@@ -502,6 +553,8 @@ main {
   font-family: Mulish, sans-serif;
   font-weight: 300;
   color: var(--cor-cinza);
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
 }
 
 .texto-lateral a {
