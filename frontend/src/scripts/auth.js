@@ -6,13 +6,12 @@ async function cadastrarUsuario(event) {
 
   const nome = document.getElementById("nome").value.trim();
   const email = document.getElementById("email").value.trim();
-  const senha = document.getElementById("senha").value.trim();
 
   try {
     const resposta = await fetch(`${API_URL}/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nome, email, senha }),
+      body: JSON.stringify({ nome, email, }),
     });
 
     const dados = await resposta.json();
@@ -34,13 +33,12 @@ async function fazerLogin(event) {
   event.preventDefault();
 
   const email = document.getElementById("email").value.trim();
-  const senha = document.getElementById("senha").value.trim();
 
   try {
     const resposta = await fetch(`${API_URL}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, senha }),
+      body: JSON.stringify({ email, }),
     });
 
     const dados = await resposta.json();

@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
 
       const email = document.getElementById("email").value.trim();
-      const senha = document.getElementById("senha").value.trim();
 
       try {
         const response = await fetch("http://localhost:5000/api/auth/login", {
@@ -14,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ email, senha }),
+          body: JSON.stringify({ email, }),
         });
 
         const data = await response.json();
