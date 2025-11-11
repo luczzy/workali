@@ -8,4 +8,17 @@
     nav ul a {
         display: none;
     }
+
+  .card-colorido {
+    flex: 0 0 90%;          
+    flex-direction: column; 
+    align-items: center;    
+    gap: 24px;              
+  }
+
+  .texto-lateral {
+    max-width: 100%;  
+    text-align: center;
+    margin-left: 0;     
+  }
 }
