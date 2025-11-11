@@ -40,6 +40,18 @@ body {
   margin: 0;
 }
 
+hr.full-width {
+  border: none;
+  height: 1px;
+  background-color: var(--cor-cinza-medio);
+  margin: 4rem 0;
+  width: 100vw;       
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%); 
+}
+
 .nav-container {
   height: 20%;
   width: 100%;
@@ -441,6 +453,10 @@ main {
   min-width: 50px;
 }
 
+.texto-lateral {
+  max-width: 250px; /* limita o texto para não invadir outro card */
+}
+
 .card-colorido.turquesa .item-card::after {
   background-color: var(--cor-turquesa);
 }
@@ -486,8 +502,8 @@ main {
 .item-card {
   position: relative;
   isolation: isolate;
-  width: 240px;
-  height: 180px;
+  width: 220px;
+  height: 160px;
   background: transparent;
   border: 1px solid var(--cor-cinza-medio);
   border-radius: 1rem;
@@ -497,7 +513,6 @@ main {
   align-items: center;
   font-family: Cambay, sans-serif;
   text-align: left;
-  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -514,16 +529,18 @@ main {
   content: "";
   position: absolute;
   left: 0;
-  width: 0.25rem;
+  width: 0rem;
   top: 48px;
   bottom: 48px;
-  width: 4px;
+  width: 3px;
   transition: transform 300ms ease;
+  opacity: 0.6;
   z-index: 4;
 }
 
 .item-card:hover::after {
   transform: scaleY(1.4);
+  opacity: 1;
 }
 
 .item-card b {
@@ -531,18 +548,12 @@ main {
   font-family: Mulish, sans-serif;
   white-space: normal;
   font-weight: bold;
-  word-wrap: break-word;
   max-width: 90%;
   line-height: 1.3;
 }
 
-.texto-lateral {
-  max-width: 320px;
-  margin-left: 0;
-}
-
 .texto-lateral h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: Cambay, sans-serif;
   color: var(--cor-cinza);
   margin-top: 1rem;
@@ -553,8 +564,6 @@ main {
   font-family: Mulish, sans-serif;
   font-weight: 300;
   color: var(--cor-cinza);
-  word-wrap: break-word; 
-  overflow-wrap: break-word; 
 }
 
 .texto-lateral a {
@@ -565,4 +574,8 @@ main {
 
 .texto-lateral a:hover {
   text-decoration: underline;
+}
+
+.item-card b{
+  font-size: 1.3rem;
 }
